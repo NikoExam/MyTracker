@@ -222,20 +222,48 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MeController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901211259144_InitialModel.cs" />
+    <Compile Include="Migrations\201901211259144_InitialModel.Designer.cs">
+      <DependentUpon>201901211259144_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901211328462_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201901211328462_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201901211328462_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901211333025_AddMembershipType.cs" />
+    <Compile Include="Migrations\201901211333025_AddMembershipType.Designer.cs">
+      <DependentUpon>201901211333025_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901211334334_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201901211334334_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201901211334334_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901211341198_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201901211341198_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201901211341198_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\MeViewModels.cs" />
+    <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CustomerViewModel.cs" />
+    <Compile Include="ViewModels\MovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -324,6 +352,13 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Scripts\knockout.validation.min.js.map" />
+    <Content Include="Views\Customers\Customers.cshtml" />
+    <Content Include="Views\Movies\Movies.cshtml" />
+    <Content Include="Views\Movies\Random.cshtml" />
+    <Content Include="Views\Movies.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -356,6 +391,23 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201901211259144_InitialModel.resx">
+      <DependentUpon>201901211259144_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901211328462_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201901211328462_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901211333025_AddMembershipType.resx">
+      <DependentUpon>201901211333025_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901211334334_PopulateMembershipTypes.resx">
+      <DependentUpon>201901211334334_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901211341198_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201901211341198_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

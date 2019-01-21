@@ -1,0 +1,25 @@
+﻿@model MyTracker.ViewModels.MovieViewModel
+
+@{
+    ViewBag.Title = "Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+
+@if (Model.Movies.Count == 0)
+{
+    <text>No one has added any movies</text>
+}
+else
+{
+    <ul>
+        @foreach (var movie in Model.Movies)
+        {
+            <li>@movie.Name</li>
+        }
+
+    </ul>
+}
